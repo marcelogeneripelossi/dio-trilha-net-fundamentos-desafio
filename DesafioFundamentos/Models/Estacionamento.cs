@@ -29,6 +29,12 @@ namespace DesafioFundamentos.Models
         public void RemoverVeiculo()
         {
 
+            if (!veiculos.Any())
+            {
+                Console.WriteLine("Não há veículos estacionados.");
+                return;
+            }
+
             // Pedir para o usuário digitar a placa e armazenar na variável placa
             string placa = "";
 
@@ -45,7 +51,6 @@ namespace DesafioFundamentos.Models
             {
                 int horas = 0;
                 decimal valorTotal = 0;
-
 
                 // Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
                 do
